@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>اسماعيل سيد اسماعيل — Frontend Developer</title>
+  <meta name="description" content="بورتفليو اسماعيل سيد اسماعيل — مطور واجهات أمامية محترف" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#projects">تخطي إلى المحتوى</a>
+
+<!-- Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- Noise overlay -->
+<div class="noise"></div>
+
+<!-- Navigation -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a class="logo" href="#hero">
+      <div class="logo-mark">IS</div>
+      <div class="logo-text">
+        <span class="logo-name">اسماعيل سيد</span>
+        <span class="logo-role">Frontend Dev</span>
+      </div>
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="فتح القائمة" aria-controls="nav" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav" aria-label="التنقل الرئيسي">
+      <a href="#projects" class="nav-link">المشاريع</a>
+      <a href="#skills" class="nav-link">المهارات</a>
+      <a href="#about" class="nav-link">عني</a>
+      <a href="#contact" class="nav-link nav-cta">تواصل</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- Hero -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <canvas class="grid-canvas" id="gridCanvas"></canvas>
+  </div>
+
+  <div class="hero-content">
+    <figure class="hero-avatar reveal-up" style="--d:0.6">
+      <div class="avatar-ring">
+        <img src="assets/Porfilo.png" alt="صورة اسماعيل سيد اسماعيل" width="560" height="720" decoding="async" fetchpriority="high" />
+      </div>
+      <figcaption class="avatar-caption">
+        <strong>اسماعيل سيد اسماعيل</strong>
+        <span>Frontend Developer</span>
+      </figcaption>
+    </figure>
+
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      متاح للعمل الآن
+    </div>
+
+    <h1 class="hero-title">
+      <span class="title-line reveal-up" style="--d:0">أبني واجهات</span>
+      <span class="title-line accent-line reveal-up" style="--d:1">تُذهل المستخدم</span>
+      <span class="title-line reveal-up" style="--d:2">وتُحقق النتائج</span>
+    </h1>
+
+    <p class="hero-sub reveal-up" style="--d:3">
+      مطور واجهات أمامية متخصص في بناء تجارب رقمية استثنائية.<br>
+      ٨ مشاريع منشورة · ٤ سنوات خبرة · تصميم ١٠٠٪ متجاوب
+    </p>
+
+    <div class="hero-actions reveal-up" style="--d:4">
+      <a href="#projects" class="btn btn-primary">
+        <span>شاهد المشاريع</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#contact" class="btn btn-ghost">تواصل معي</a>
+    </div>
+
+    <div class="hero-stats reveal-up" style="--d:5">
+      <div class="stat">
+        <strong>8</strong><span>مشاريع</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <strong>4+</strong><span>سنوات</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <strong>100%</strong><span>متجاوب</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual reveal-up" style="--d:2">
+    <div class="visual-card">
+      <div class="vc-header">
+        <div class="vc-dots">
+          <span style="background:#ff5f57"></span>
+          <span style="background:#febc2e"></span>
+          <span style="background:#28c840"></span>
+        </div>
+        <span class="vc-title">portfolio.js</span>
+      </div>
+      <div class="vc-code">
+        <div class="code-line"><span class="c-kw">const</span> <span class="c-var">developer</span> = {</div>
+        <div class="code-line indent"><span class="c-key">name</span>: <span class="c-str">"اسماعيل سيد"</span>,</div>
+        <div class="code-line indent"><span class="c-key">role</span>: <span class="c-str">"Frontend Dev"</span>,</div>
+        <div class="code-line indent"><span class="c-key">skills</span>: [<span class="c-str">"React"</span>, <span class="c-str">"CSS"</span>],</div>
+        <div class="code-line indent"><span class="c-key">projects</span>: <span class="c-num">8</span>,</div>
+        <div class="code-line indent"><span class="c-key">available</span>: <span class="c-bool">true</span>,</div>
+        <div class="code-line">};</div>
+        <div class="code-line spacer"></div>
+        <div class="code-line"><span class="c-kw">export default</span> developer;</div>
+        <div class="code-cursor">|</div>
+      </div>
+      <div class="vc-footer">
+        <span>✓ جاهز للمشاريع</span>
+        <span>UTF-8</span>
+      </div>
+    </div>
+
+    <div class="floating-badge badge-tech">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      Clean Code
+    </div>
+
+    <div class="floating-badge badge-perf">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Fast Delivery
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>تمرير للأسفل</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section class="projects section" id="projects">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">/ المشاريع</span>
+      <h2 class="section-title">أعمال منشورة على الإنترنت</h2>
+      <p class="section-sub">٨ مشاريع متاحة للزيارة المباشرة</p>
+    </div>
+
+    <div class="project-grid">
+
+      <article class="project-card card-featured" data-index="01">
+        <div class="project-thumbnail fallback-1">
+          <img src="assets/projects/software-assignment.png" alt="Software Assignment" loading="lazy" decoding="async" onerror="this.remove()"/>
+          <div class="thumb-overlay">
+            <a href="https://ismailsayedismail.github.io/Software-assignment/" target="_blank" rel="noopener" class="thumb-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              زيارة المشروع
+            </a>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="project-num">01</span>
+          <h3>Software Assignment</h3>
+          <p>مشروع منشور على GitHub Pages بتصميم احترافي وأداء متميز.</p>
+          <div class="project-tags"><span>GitHub Pages</span><span>Frontend</span></div>
+        </div>
+      </article>
+
+      <article class="project-card" data-index="02">
+        <div class="project-thumbnail fallback-2">
+          <img src="assets/projects/sources-of-commitment.png" alt="Sources of Commitment" loading="lazy" decoding="async" onerror="this.remove()"/>
+          <div class="thumb-overlay">
+            <a href="https://ismailsayedismail.github.io/Sources-of-commitment/" target="_blank" rel="noopener" class="thumb-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              زيارة المشروع
+            </a>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="project-num">02</span>
+          <h3>Sources of Commitment</h3>
+          <p>مشروع منشور على GitHub Pages.</p>
+          <div class="project-tags"><span>GitHub Pages</span><span>UI/UX</span></div>
+        </div>
+      </article>
+
+      <article class="project-card" data-index="03">
+        <div class="project-thumbnail fallback-3">
+          <img src="assets/projects/three-chapter-maintenance.png" alt="Three Chapter Maintenance" loading="lazy" decoding="async" onerror="this.remove()"/>
+          <div class="thumb-overlay">
+            <a href="https://ismailsayedismail.github.io/Three-chapter-Maintenance/" target="_blank" rel="noopener" class="thumb-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              زيارة المشروع
+            </a>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="project-num">03</span>
+          <h3>Three Chapter Maintenance</h3>
+          <p>مشروع منشور على GitHub Pages.</p>
+          <div class="project-tags"><span>GitHub Pages</span><span>Maintenance</span></div>
+        </div>
+      </article>
+
+      <article class="project-card" data-index="04">
+        <div class="project-thumbnail fallback-4">
+          <img src="assets/projects/my-gallery.png" alt="My Gallery" loading="lazy" decoding="async" onerror="this.remove()"/>
+          <div class="thumb-overlay">
+            <a href="https://my-gallery-peach.vercel.app/" target="_blank" rel="noopener" class="thumb-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              زيارة المشروع
+            </a>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="project-num">04</span>
+          <h3>My Gallery</h3>
+          <p>تطبيق معرض صور منشور على Vercel.</p>
+          <div class="project-tags"><span>Vercel</span><span>Gallery</span></div>
+        </div>
+      </article>
+
+      <article class="project-card" data-index="05">
+        <div class="project-thumbnail fallback-5">
+          <img src="assets/projects/basic-skills.png" alt="Basic Skills — Art Educat" loading="lazy" decoding="async" onerror="this.remove()"/>
+          <div class="thumb-overlay">
+            <a href="https://chapter-one-basic-skills-art-educat.vercel.app/" target="_blank" rel="noopener" class="thumb-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              زيارة المشروع
+            </a>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="project-num">05</span>
+          <h3>Basic Skills — Art Educat</h3>
+          <p>تطبيق تعليمي منشور على Vercel.</p>
+          <div class="project-tags"><span>Vercel</span><span>Education</span></div>
+        </div>
+      </article>
+
+      <article class="project-card" data-index="06">
+        <div class="project-thumbnail fallback-6">
+          <img src="assets/projects/portfolio-new.png" alt="Portfolio — New" loading="lazy" decoding="async" onerror="this.remove()"/>
+          <div class="thumb-overlay">
+            <a href="https://portfolio-new-azure-nu.vercel.app/" target="_blank" rel="noopener" class="thumb-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              زيارة المشروع
+            </a>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="project-num">06</span>
+          <h3>Portfolio — New</h3>
+          <p>بورتفليو احترافي منشور على Vercel.</p>
+          <div class="project-tags"><span>Vercel</span><span>Portfolio</span></div>
+        </div>
+      </article>
+
+      <article class="project-card" data-index="07">
+        <div class="project-thumbnail fallback-7">
+          <img src="assets/projects/project-college.png" alt="Project College — Login" loading="lazy" decoding="async" onerror="this.remove()"/>
+          <div class="thumb-overlay">
+            <a href="https://project-college-iota.vercel.app/login" target="_blank" rel="noopener" class="thumb-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              زيارة المشروع
+            </a>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="project-num">07</span>
+          <h3>Project College — Login</h3>
+          <p>صفحة تسجيل دخول جامعية منشورة على Vercel.</p>
+          <div class="project-tags"><span>Vercel</span><span>Auth</span></div>
+        </div>
+      </article>
+
+      <article class="project-card" data-index="08">
+        <div class="project-thumbnail fallback-8">
+          <img src="assets/projects/mechanical-engineering.png" alt="Mechanical Engineering" loading="lazy" decoding="async" onerror="this.remove()"/>
+          <div class="thumb-overlay">
+            <a href="https://mechanical-engineering.vercel.app/" target="_blank" rel="noopener" class="thumb-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              زيارة المشروع
+            </a>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="project-num">08</span>
+          <h3>Mechanical Engineering</h3>
+          <p>موقع هندسة ميكانيكية منشور على Vercel.</p>
+          <div class="project-tags"><span>Vercel</span><span>Engineering</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section class="skills section" id="skills">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">/ المهارات</span>
+      <h2 class="section-title">أدواتي وخبراتي</h2>
+    </div>
+
+    <div class="skills-layout">
+      <div class="skills-list">
+        <div class="skill-item reveal-up">
+          <div class="skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9l3 3-3 3M13 15h3"/></svg>
+          </div>
+          <div class="skill-info">
+            <h3>تطوير Frontend</h3>
+            <p>بناء واجهات تفاعلية سريعة ومتجاوبة بأفضل ممارسات الصناعة</p>
+          </div>
+          <div class="skill-level">
+            <div class="skill-bar" style="--w:90%"></div>
+          </div>
+        </div>
+
+        <div class="skill-item reveal-up">
+          <div class="skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="skill-info">
+            <h3>HTML / CSS</h3>
+            <p>كتابة كود نظيف ومنظم مع تأثيرات بصرية متقدمة</p>
+          </div>
+          <div class="skill-level">
+            <div class="skill-bar" style="--w:95%"></div>
+          </div>
+        </div>
+
+        <div class="skill-item reveal-up">
+          <div class="skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div class="skill-info">
+            <h3>JavaScript</h3>
+            <p>برمجة تفاعلية ديناميكية وتجارب مستخدم لا تُنسى</p>
+          </div>
+          <div class="skill-level">
+            <div class="skill-bar" style="--w:85%"></div>
+          </div>
+        </div>
+
+        <div class="skill-item reveal-up">
+          <div class="skill-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="skill-info">
+            <h3>UI/UX Design</h3>
+            <p>تصميم واجهات جذابة تجمع بين الجمال والوظيفية</p>
+          </div>
+          <div class="skill-level">
+            <div class="skill-bar" style="--w:80%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-aside">
+        <div class="tech-stack">
+          <h4>التقنيات</h4>
+          <div class="tech-tags">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+            <span>React</span><span>Git</span><span>Vercel</span>
+            <span>GitHub Pages</span><span>Responsive</span>
+          </div>
+        </div>
+
+        <div class="availability-card">
+          <div class="avail-dot"></div>
+          <div>
+            <strong>متاح للعمل</strong>
+            <p>مشاريع فريلانس أو دوام كامل</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <span class="section-label">/ عني</span>
+        <h2 class="section-title">مطور شغوف بصنع تجارب رقمية مميزة</h2>
+        <p>خلال ٤ سنوات من العمل في تطوير الواجهات الأمامية، طورت أسلوبي في كتابة كود نظيف وفعّال مع التركيز على تجربة المستخدم وأداء المواقع.</p>
+        <p>أؤمن أن الموقع الجيد لا يقتصر على الشكل الجميل فقط، بل يجب أن يكون سريعاً ومتجاوباً ومبنياً بأفضل المعايير.</p>
+        <a href="#contact" class="btn btn-primary" style="width:fit-content">تواصل معي</a>
+      </div>
+
+      <div class="about-metrics">
+        <div class="metric-card mc-1">
+          <strong>8</strong>
+          <span>مشاريع مكتملة</span>
+        </div>
+        <div class="metric-card mc-2">
+          <strong>4+</strong>
+          <span>سنوات خبرة</span>
+        </div>
+        <div class="metric-card mc-3">
+          <strong>100%</strong>
+          <span>تصميم متجاوب</span>
+        </div>
+        <div class="metric-card mc-4">
+          <strong>∞</strong>
+          <span>شغف بالتطوير</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact section" id="contact">
+  <div class="container">
+    <div class="contact-wrapper">
+      <div class="contact-glow"></div>
+      <div class="contact-content">
+        <span class="section-label">/ تواصل</span>
+        <h2>لنبني شيئاً رائعاً معاً</h2>
+        <p>هل لديك مشروع في ذهنك؟ أنا متاح للتحدث عن أفكارك وتحويلها إلى واقع.</p>
+        <div class="contact-actions">
+          <a href="mailto:hello@example.com" class="btn btn-primary btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            أرسل رسالة
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <span>© <span id="year"></span> اسماعيل سيد اسماعيل</span>
+      <span>Frontend Developer</span>
+      <a href="#hero" class="footer-top">↑ للأعلى</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Grid canvas
+const canvas = document.getElementById('gridCanvas');
+if (canvas) {
+  const ctx = canvas.getContext('2d');
+  if (!ctx) {
+    // No-op if context isn't available
+  } else {
+    let resizeRaf = 0;
+  function resizeCanvas() {
+    if (resizeRaf) cancelAnimationFrame(resizeRaf);
+    resizeRaf = requestAnimationFrame(() => {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+      drawGrid();
+    });
+  }
+  function drawGrid() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const spacing = 48;
+    ctx.strokeStyle = 'rgba(255,255,255,0.045)';
+    ctx.lineWidth = 1;
+    for (let x = 0; x < canvas.width; x += spacing) {
+      ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height); ctx.stroke();
+    }
+    for (let y = 0; y < canvas.height; y += spacing) {
+      ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke();
+    }
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+  }
+}
+
+// Custom cursor
+const cursor = document.getElementById('cursor');
+const cursorDot = document.getElementById('cursorDot');
+let mx = 0, my = 0, cx = 0, cy = 0;
+const finePointer = window.matchMedia && window.matchMedia('(pointer: fine) and (hover: hover)').matches;
+if (!prefersReducedMotion && finePointer) {
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+  function animateCursor() {
+    cx += (mx - cx) * 0.12;
+    cy += (my - cy) * 0.12;
+    if (cursor) { cursor.style.transform = `translate(${cx - 20}px, ${cy - 20}px)`; }
+    if (cursorDot) { cursorDot.style.transform = `translate(${mx - 4}px, ${my - 4}px)`; }
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+  document.querySelectorAll('a, button, .project-card').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor && cursor.classList.add('cursor-hover'));
+    el.addEventListener('mouseleave', () => cursor && cursor.classList.remove('cursor-hover'));
+  });
+} else {
+  if (cursor) cursor.style.display = 'none';
+  if (cursorDot) cursorDot.style.display = 'none';
+}
+
+// Hamburger
+const ham = document.getElementById('hamburger');
+const nav = document.getElementById('nav');
+function setMenuOpen(open) {
+  if (!nav || !ham) return;
+  nav.classList.toggle('nav-open', open);
+  ham.classList.toggle('ham-open', open);
+  ham.setAttribute('aria-expanded', open ? 'true' : 'false');
+  ham.setAttribute('aria-label', open ? 'إغلاق القائمة' : 'فتح القائمة');
+}
+ham && ham.addEventListener('click', () => {
+  const open = nav && nav.classList.contains('nav-open');
+  setMenuOpen(!open);
+});
+nav && nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenuOpen(false)));
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') setMenuOpen(false);
+});
+document.addEventListener('click', (e) => {
+  if (!nav || !ham) return;
+  const target = e.target;
+  if (!(target instanceof Element)) return;
+  const open = nav.classList.contains('nav-open');
+  if (!open) return;
+  if (nav.contains(target) || ham.contains(target)) return;
+  setMenuOpen(false);
+});
+
+// Reveal on scroll
+const revealEls = document.querySelectorAll('.reveal-up, .project-card, .skill-item');
+if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+  revealEls.forEach(el => el.classList.add('revealed'));
+} else {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); observer.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => observer.observe(el));
+}
+
+// Skill bars
+const skillBars = document.querySelectorAll('.skill-bar');
+if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+  skillBars.forEach(b => b.classList.add('bar-animate'));
+} else {
+  const barObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('bar-animate'); barObserver.unobserve(e.target); } });
+  }, { threshold: 0.5 });
+  skillBars.forEach(b => barObserver.observe(b));
+}
+</script>
+</body>
+</html>
